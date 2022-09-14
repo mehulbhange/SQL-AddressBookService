@@ -58,3 +58,12 @@ mysql> SELECT * FROM address_book WHERE city = 'mumbai' or state = 'gujarat';
 | Hitesh     | Meher     | surat   | surat  | gujarat     | 123456 | 9090909090   | hitesh@gmail.com |
 +------------+-----------+---------+--------+-------------+--------+--------------+------------------+
 2 rows in set (0.00 sec)
+
+/* UC7 */
+mysql> SELECT COUNT(*) FROM address_book WHERE city = 'mumbai' or state = 'gujarat';
++----------+
+| COUNT(*) |
++----------+
+|        2 |
++----------+
+1 row in set (0.00 sec)
