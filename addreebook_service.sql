@@ -19,3 +19,14 @@ Query OK, 0 rows affected (0.03 sec)
 /* UC3 */
 mysql> INSERT INTO address_book VALUES('Mehul', 'Bhange', 'pune','pune','maharashtra','123456','9090909090','mehul@gmail.com');
 Query OK, 1 row affected (0.01 sec)
+
+/* UC4 */
+mysql> UPDATE address_book set address = 'mumbai', city = 'mumbai' WHERE first_name = 'Mehul';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
++------------+-----------+---------+--------+-------------+--------+--------------+-----------------+
+| first_name | last_name | address | city   | state       | zip    | phone_number | email           |
++------------+-----------+---------+--------+-------------+--------+--------------+-----------------+
+| Mehul      | Bhange    | mumbai  | mumbai | maharashtra | 123456 | 9090909090   | mehul@gmail.com |
++------------+-----------+---------+--------+-------------+--------+--------------+-----------------+
+
