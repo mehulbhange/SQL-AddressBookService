@@ -67,3 +67,14 @@ mysql> SELECT COUNT(*) FROM address_book WHERE city = 'mumbai' or state = 'gujar
 |        2 |
 +----------+
 1 row in set (0.00 sec)
+
+/* UC8 */
+mysql> SELECT * FROM address_book WHERE city = 'mumbai' ORDER BY first_name;
++------------+-----------+---------+--------+-------------+--------+--------------+-----------------+
+| first_name | last_name | address | city   | state       | zip    | phone_number | email           |
++------------+-----------+---------+--------+-------------+--------+--------------+-----------------+
+| abc        | xyz       | mumbai  | mumbai | maharashtra | 123456 | 9090909090   | abc@gmail.com   |
+| Mehul      | Bhange    | mumbai  | mumbai | maharashtra | 123456 | 9090909090   | mehul@gmail.com |
+| pqr        | xyz       | mumbai  | mumbai | maharashtra | 123456 | 9090909090   | pqr@gmail.com   |
++------------+-----------+---------+--------+-------------+--------+--------------+-----------------+
+3 rows in set (0.01 sec)
