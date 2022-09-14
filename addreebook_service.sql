@@ -49,3 +49,12 @@ Query OK, 1 row affected (0.01 sec)
 | Mehul      | Bhange    | mumbai  | mumbai | maharashtra | 123456 | 9090909090   | mehul@gmail.com |
 +------------+-----------+---------+--------+-------------+--------+--------------+-----------------+
 
+/* UC6 */
+mysql> SELECT * FROM address_book WHERE city = 'mumbai' or state = 'gujarat';
++------------+-----------+---------+--------+-------------+--------+--------------+------------------+
+| first_name | last_name | address | city   | state       | zip    | phone_number | email            |
++------------+-----------+---------+--------+-------------+--------+--------------+------------------+
+| Mehul      | Bhange    | mumbai  | mumbai | maharashtra | 123456 | 9090909090   | mehul@gmail.com  |
+| Hitesh     | Meher     | surat   | surat  | gujarat     | 123456 | 9090909090   | hitesh@gmail.com |
++------------+-----------+---------+--------+-------------+--------+--------------+------------------+
+2 rows in set (0.00 sec)
