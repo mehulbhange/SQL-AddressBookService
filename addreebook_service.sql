@@ -100,3 +100,31 @@ mysql> desc address_book;
 | addressbook_name | varchar(50)  | YES  |     | NULL    |       |
 +------------------+--------------+------+-----+---------+-------+
 10 rows in set (0.00 sec)
+
+/* UC10 */
+mysql> select * from address_book;
++------------+-----------+---------+--------+-------------+--------+--------------+------------------+---------+------------------+
+| first_name | last_name | address | city   | state       | zip    | phone_number | email            | type    | addressbook_name |
++------------+-----------+---------+--------+-------------+--------+--------------+------------------+---------+------------------+
+| Mehul      | Bhange    | mumbai  | mumbai | maharashtra | 123456 | 9090909090   | mehul@gmail.com  | family  | book1            |
+| Hitesh     | Meher     | surat   | surat  | gujarat     | 123456 | 9090909090   | hitesh@gmail.com | family  | book2            |
+| abc        | xyz       | mumbai  | mumbai | maharashtra | 123456 | 9090909090   | abc@gmail.com    | friends | book1            |
+| pqr        | xyz       | mumbai  | mumbai | maharashtra | 123456 | 9090909090   | pqr@gmail.com    | friends | book2            |
++------------+-----------+---------+--------+-------------+--------+--------------+------------------+---------+------------------+
+4 rows in set (0.00 sec)
+
+mysql> SELECT COUNT(*) FROM address_book WHERE type = 'family';
++----------+
+| COUNT(*) |
++----------+
+|        2 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT COUNT(*) FROM address_book WHERE type = 'friends';
++----------+
+| COUNT(*) |
++----------+
+|        2 |
++----------+
+1 row in set (0.00 sec)
