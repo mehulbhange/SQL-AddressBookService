@@ -128,3 +128,23 @@ mysql> SELECT COUNT(*) FROM address_book WHERE type = 'friends';
 |        2 |
 +----------+
 1 row in set (0.00 sec)
+
+/* UC11 */
+mysql> INSERT INTO address_book VALUES('qwe','xyz','pune','pune','maharashtra','123456','9090909090','qwe@gmail.com','friends','book1');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> INSERT INTO address_book VALUES('qwe','xyz','pune','pune','maharashtra','123456','9090909090','qwe@gmail.com','family','book1');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from address_book;
++------------+-----------+---------+--------+-------------+--------+--------------+------------------+---------+------------------+
+| first_name | last_name | address | city   | state       | zip    | phone_number | email            | type    | addressbook_name |
++------------+-----------+---------+--------+-------------+--------+--------------+------------------+---------+------------------+
+| Mehul      | Bhange    | mumbai  | mumbai | maharashtra | 123456 | 9090909090   | mehul@gmail.com  | family  | book1            |
+| Hitesh     | Meher     | surat   | surat  | gujarat     | 123456 | 9090909090   | hitesh@gmail.com | family  | book2            |
+| abc        | xyz       | mumbai  | mumbai | maharashtra | 123456 | 9090909090   | abc@gmail.com    | friends | book1            |
+| pqr        | xyz       | mumbai  | mumbai | maharashtra | 123456 | 9090909090   | pqr@gmail.com    | friends | book2            |
+| qwe        | xyz       | pune    | pune   | maharashtra | 123456 | 9090909090   | qwe@gmail.com    | friends | book1            |
+| qwe        | xyz       | pune    | pune   | maharashtra | 123456 | 9090909090   | qwe@gmail.com    | family  | book1            |
++------------+-----------+---------+--------+-------------+--------+--------------+------------------+---------+------------------+
+6 rows in set (0.00 sec)
