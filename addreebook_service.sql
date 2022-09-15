@@ -78,3 +78,25 @@ mysql> SELECT * FROM address_book WHERE city = 'mumbai' ORDER BY first_name;
 | pqr        | xyz       | mumbai  | mumbai | maharashtra | 123456 | 9090909090   | pqr@gmail.com   |
 +------------+-----------+---------+--------+-------------+--------+--------------+-----------------+
 3 rows in set (0.01 sec)
+
+/* UC9 */
+mysql> ALTER TABLE address_book ADD COLUMN type varchar(50), ADD addressbook_name varchar(50);
+Query OK, 0 rows affected (0.06 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc address_book;
++------------------+--------------+------+-----+---------+-------+
+| Field            | Type         | Null | Key | Default | Extra |
++------------------+--------------+------+-----+---------+-------+
+| first_name       | varchar(150) | YES  |     | NULL    |       |
+| last_name        | varchar(150) | YES  |     | NULL    |       |
+| address          | varchar(150) | YES  |     | NULL    |       |
+| city             | varchar(50)  | YES  |     | NULL    |       |
+| state            | varchar(50)  | YES  |     | NULL    |       |
+| zip              | varchar(6)   | YES  |     | NULL    |       |
+| phone_number     | varchar(10)  | YES  |     | NULL    |       |
+| email            | varchar(50)  | YES  |     | NULL    |       |
+| type             | varchar(50)  | YES  |     | NULL    |       |
+| addressbook_name | varchar(50)  | YES  |     | NULL    |       |
++------------------+--------------+------+-----+---------+-------+
+10 rows in set (0.00 sec)
